@@ -1,0 +1,77 @@
+.chart-holder {
+    margin-bottom: 3em;
+    & span {
+        display: inline-block;
+        margin-bottom: 3em;
+    }
+}
+
+.line-chart {
+    grid-column: 2/4;
+    grid-row: 2;
+    width: 100%;
+    & .chart-nav {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        
+        & span {
+            flex-basis: 100%;
+            margin: .5em;
+        }
+
+        & button {
+            margin: .1em;
+            padding: .5em;
+            margin-bottom: 2em;
+            background: none;
+            border: none;
+            font-size: .9em;
+        }
+
+    }
+
+    @include mq ($brk-l) {
+       width: 90%;
+       height: 100%;
+       margin: 0 auto;
+    }
+
+}
+
+.bar, .doughnut {
+    @include mq ($brk-m) {
+        display: inline-block;
+        width: 49%;
+    }
+
+    @include mq ($brk-l) {
+        padding: 4em;
+        width: unset;
+    }
+}
+
+.bar {
+    grid-column: 2;
+    grid-row: 3;
+
+    @include mq ($brk-l) {
+        border-top: $border;
+        border-right: $border;
+        border-bottom: $border;
+    }
+}
+
+.doughnut {
+    grid-column: 3;
+    grid-row: 3;
+
+    @include mq ($brk-l) {
+        border-top: $border;
+        border-bottom: $border;
+    }
+}
+
+
+

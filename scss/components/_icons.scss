@@ -1,0 +1,46 @@
+.bell {
+    width: 1.7em;
+    margin-top: .1em;
+    transition: 1s;
+
+    &:hover {
+        transform: scale(1.1) rotate(-5deg);
+    }
+
+    
+    & svg {
+        stroke: $white;
+        fill: $white;
+    }
+
+    
+    &::after {
+        content: '.';
+        font-size: 4em;
+        color: $secondary-select-color;
+        position: absolute;
+        top: -.6em;
+        right: .1em;
+
+        @include mq ($brk-m) {
+            right: 9.5rem;
+            top: -.56em;
+         }
+    }
+
+    @include mq ($brk-m) {
+        grid-column: 4;
+        width: 1.3em;
+     }
+}
+
+.input input {
+    @extend %insert-icon;
+    background-image: url("../icons/icon-magnify.svg");
+  }
+
+  .recent .person {
+    @extend %insert-icon;
+    background-image: url("../icons/next.svg");
+    background-position: 98% 30%;
+  }

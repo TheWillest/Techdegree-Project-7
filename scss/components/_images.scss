@@ -1,0 +1,23 @@
+header img {
+    display: none;
+
+    @include mq ($brk-m) {
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        grid-column: 4;
+        margin-right: .7em;
+    }
+}
+
+.people img {
+    
+    border-radius: 50%;
+        width: 2em;
+        height: 2em;
+    @include mq ($brk-m) {
+        width: 2.5em;
+        height: 2.5em;
+    }
+}

@@ -1,0 +1,40 @@
+.side-nav {
+    display: none;
+    grid-column: 1;
+    grid-row: 1 / 7;
+
+    @include mq ($brk-l) {
+        display: flex;
+        flex-direction: column;
+        background: darken($main-theme-color, 30%);
+        width: 3.5em;
+    }
+
+   & svg {
+       width: 2em;
+       fill: darken($grey, 20%);
+   }
+
+   & .dashboard svg {
+       fill: $white;
+   }
+
+}
+
+.dashboard {
+    padding: 1em .4em .6em; 
+    border-left: .2em solid $secondary-select-color;
+}
+
+.members {
+    margin: .5em .6em;
+}
+
+.visits {
+    margin: .5em .8em 1.2em;
+}
+
+.settings-nav {
+    margin-left: .6em;
+}
+
